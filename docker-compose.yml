@@ -1,27 +1,33 @@
 version: '3.0'
 services:
   web:
-    image: alexcheng/magento2
+    build:
+      context: .
     ports:
-      - "80:80"
+      - "8080:80"
     links:
       - db
     volumes: 
-      - magento-data:/var/www/html  
+      - ./dev/app/code:/var/www/html/app/code
+      - ./dev/composer.json:/var/www/html/composer.json
     env_file:
       - env
+    container_name: magento2_web
   db:
-    image: mysql:5.6.23
+    image: mariadb
     volumes:
       - db-data:/var/lib/mysql/data
+      - ./sql:/usr/data/sql
     env_file:
       - env
+    container_name: magento2_db
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     ports:
       - "8580:80"
     links:
       - db     
+    container_name: magento2_phpmyadmin
 volumes:
   magento-data:
   db-data: 

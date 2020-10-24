@@ -113,7 +113,7 @@
 		"amzn/amazon-pay-module": "*",
 		"amzn/amazon-pay-sdk-php": "*",
 		"amzn/login-with-amazon-module": "*",
-		"yotpo/yotpo": "*"
+		"yotpo/magento2-module-yotpo-reviews": "*"
 	},
 	"autoload": {
 		"psr-4": {

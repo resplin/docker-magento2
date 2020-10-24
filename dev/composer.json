@@ -86,18 +86,25 @@
 		"magento/module-sales-analytics": "*",
 		"magento/module-wishlist-analytics": "*",
 
+		"magento/module-bundle-import-export": "*",
 		"magento/module-bundle-import-export-staging": "*",
+		"magento/module-configurable-import-export": "*",
+		"magento/module-customer-import-export": "*",
 		"magento/module-downloadable-import-export": "*",
+		"magento/module-tax-import-export": "*",
 
 		"magento/module-authorizenet": "*",
 		"magento/module-authorizenet-acceptjs": "*",
 		"magento/module-authorizenet-cardinal": "*",
 		"magento/module-braintree": "*",
 		"magento/module-cardinal-commerce": "*",
+		"magento/module-dhl": "*",
+		"magento/module-fedex": "*",
 		"magento/module-marketplace": "*",
 		"magento/module-new-relic-reporting": "*",
 		"magento/module-signifyd": "*",
 		"magento/module-swagger-webapi-async": "*",
+		"magento/module-ups": "*",
 		"magento/module-weee": "*"
 	},
 	"autoload": {

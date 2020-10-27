@@ -79,6 +79,7 @@
 		"magento/module-weee-graph-ql": "*",
 		"magento/module-wishlist-graph-ql": "*",
 
+        "magento/module-admin-analytics": "*",
 		"magento/module-catalog-analytics": "*",
 		"magento/module-customer-analytics": "*",
 		"magento/module-quote-analytics": "*",
@@ -86,11 +87,13 @@
 		"magento/module-sales-analytics": "*",
 		"magento/module-wishlist-analytics": "*",
 
+		"magento/module-advanced-pricing-import-export": "*",
 		"magento/module-bundle-import-export": "*",
 		"magento/module-bundle-import-export-staging": "*",
 		"magento/module-configurable-import-export": "*",
 		"magento/module-customer-import-export": "*",
 		"magento/module-downloadable-import-export": "*",
+		"magento/module-grouped-import-export": "*",
 		"magento/module-inventory-import-export": "*",
 		"magento/module-tax-import-export": "*",
 
@@ -101,8 +104,11 @@
 		"magento/module-cardinal-commerce": "*",
 		"magento/module-dhl": "*",
 		"magento/module-fedex": "*",
+		"magento/module-google-adwords": "*",
 		"magento/module-marketplace": "*",
 		"magento/module-new-relic-reporting": "*",
+		"magento/module-paypal": "*",
+        "magento/module-paypal-recaptcha": "*",
 		"magento/module-signifyd": "*",
 		"magento/module-swagger-webapi-async": "*",
 		"magento/module-ups": "*",
@@ -113,6 +119,10 @@
 		"amzn/amazon-pay-module": "*",
 		"amzn/amazon-pay-sdk-php": "*",
 		"amzn/login-with-amazon-module": "*",
+		"dotmailer/dotmailer-magento2-extension": "*",
+		"dotmailer/dotmailer-magento2-extension-chat": "*",
+		"msp/twofactorauth": "*",
+		"vertex/module-address-validation": "*",
 		"yotpo/magento2-module-yotpo-reviews": "*"
 	},
 	"autoload": {

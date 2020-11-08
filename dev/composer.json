@@ -11,13 +11,8 @@
 		"sort-packages": true
 	},
 	"require": {
-		"ext-json": "*",
-		"ext-simplexml": "*",
-		"ext-soap": "*",
 		"avstudnitz/disable-modules": "^1.0",
-		"beanstream/beanstream": "dev-master",
-		"magento/product-community-edition": "2.3.5-p1",
-		"mageplaza/module-smtp": "^1.2"
+		"magento/product-community-edition": "2.3.5-p1"
 	},
 	"require-dev": {
 		"allure-framework/allure-phpunit": "~1.2.0",
@@ -96,6 +91,7 @@
 		"magento/module-tax-import-export": "*",
 
         "magento/module-adobe-ims": "*",
+        "magento/module-adobe-ims-api": "*",
         "magento/module-adobe-stock-admin-ui": "*",
         "magento/module-adobe-stock-asset": "*",
         "magento/module-adobe-stock-asset-api": "*",
@@ -115,6 +111,7 @@
 		"magento/module-dhl": "*",
 		"magento/module-fedex": "*",
 		"magento/module-google-adwords": "*",
+        "magento/module-google-analytics": "*",
         "magento/module-google-optimizer": "*",
         "magento/module-inventory": "*",
         "magento/module-inventory-admin-ui": "*",
@@ -198,7 +195,9 @@
 		"amzn/login-with-amazon-module": "*",
 		"dotmailer/dotmailer-magento2-extension": "*",
 		"dotmailer/dotmailer-magento2-extension-chat": "*",
+        "msp/recaptcha": "*",
 		"msp/twofactorauth": "*",
+        "temando/module-shipping-remover": "*",
 		"vertex/module-address-validation": "*",
         "vertex/module-tax": "*",
 		"yotpo/magento2-module-yotpo-reviews": "*"

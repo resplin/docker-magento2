@@ -1,0 +1,41 @@
+#!/bin/bash
+
+docker_container=magento2_web
+
+echo "Stopping all docker instances..."
+docker-compose down
+
+echo "Starting requested docker instance..."
+docker-compose up -d
+
+# Download mysql dump
+#echo "Downloading mysql dump to sql/"
+#permission denied
+#mysqldump -h ecin1devo4lnx7.ecbrands.com -u resplin -py6\$sr1\@Pqpym resplin > ./sql/resplin.sql
+# Import into Docker from local file /shrug
+#echo "Importing 'resplin' database export to Docker'd 'magento' database..."
+#docker exec -i docker-magento2-master_db_1 mysql -u root -pTime8888! magento < ./sql/resplin.sql
+
+echo "Updating files via composer..."
+docker exec --user www-data -it $docker_container composer update
+
+echo "Installing Magento2..."
+docker exec -it $docker_container install-magento
+
+echo "Setting developer mode..."
+docker exec --user www-data -it $docker_container php bin/magento deploy:mode:set developer
+
+echo "Setting development settings..."
+docker exec --user www-data -it $docker_container php bin/magento config:set dev/front_end_development_workflow/type client_side_compilation
+docker exec --user www-data -it $docker_container php bin/magento config:set dev/js/merge_files 1
+docker exec --user www-data -it $docker_container php bin/magento config:set dev/js/enable_js_bundling 1
+
+
+echo "Cleaning up..."
+docker exec --user www-data -it $docker_container rm -rf pub/static/frontend/ pub/static/adminhtml/ pub/static/_requirejs/
+docker exec --user www-data -it $docker_container php bin/magento setup:upgrade
+docker exec --user www-data -it $docker_container rm -rf generated
+docker exec --user www-data -it $docker_container php bin/magento setup:di:compile
+docker exec --user www-data -it $docker_container php bin/magento setup:static-content:deploy -f
+
+echo "COMPLETE!"

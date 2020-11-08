@@ -106,6 +106,7 @@
 		"magento/module-fedex": "*",
 		"magento/module-google-adwords": "*",
 		"magento/module-marketplace": "*",
+        "magento/module-multishipping": "*",
 		"magento/module-new-relic-reporting": "*",
 		"magento/module-paypal": "*",
         "magento/module-paypal-recaptcha": "*",

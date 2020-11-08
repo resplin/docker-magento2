@@ -178,6 +178,8 @@
         "magento/module-inventory-source-selection": "*",
         "magento/module-inventory-source-selection-api": "*",
 		"magento/module-marketplace": "*",
+        "magento/module-msrp-configurable-product": "*",
+        "magento/module-msrp-grouped-product": "*",
         "magento/module-multishipping": "*",
 		"magento/module-new-relic-reporting": "*",
 		"magento/module-paypal": "*",

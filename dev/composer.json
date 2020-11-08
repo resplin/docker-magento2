@@ -95,6 +95,18 @@
 		"magento/module-grouped-import-export": "*",
 		"magento/module-tax-import-export": "*",
 
+        "magento/module-adobe-ims": "*",
+        "magento/module-adobe-stock-admin-ui": "*",
+        "magento/module-adobe-stock-asset": "*",
+        "magento/module-adobe-stock-asset-api": "*",
+        "magento/module-adobe-stock-client": "*",
+        "magento/module-adobe-stock-client-api": "*",
+        "magento/module-adobe-stock-image": "*",
+        "magento/module-adobe-stock-image-admin-ui": "*",
+        "magento/module-adobe-stock-image-api": "*",
+
+        "magento/module-amqp": "*",
+        "magento/module-amqp-store": "*",
 		"magento/module-authorizenet": "*",
 		"magento/module-authorizenet-acceptjs": "*",
 		"magento/module-authorizenet-cardinal": "*",
@@ -103,6 +115,7 @@
 		"magento/module-dhl": "*",
 		"magento/module-fedex": "*",
 		"magento/module-google-adwords": "*",
+        "magento/module-google-optimizer": "*",
         "magento/module-inventory": "*",
         "magento/module-inventory-admin-ui": "*",
         "magento/module-inventory-advanced-checkout": "*",
@@ -172,6 +185,7 @@
 		"magento/module-new-relic-reporting": "*",
 		"magento/module-paypal": "*",
         "magento/module-paypal-recaptcha": "*",
+        "magento/module-sample-data": "*",
 		"magento/module-signifyd": "*",
 		"magento/module-swagger-webapi-async": "*",
 		"magento/module-ups": "*",
@@ -186,6 +200,7 @@
 		"dotmailer/dotmailer-magento2-extension-chat": "*",
 		"msp/twofactorauth": "*",
 		"vertex/module-address-validation": "*",
+        "vertex/module-tax": "*",
 		"yotpo/magento2-module-yotpo-reviews": "*"
 	},
 	"autoload": {

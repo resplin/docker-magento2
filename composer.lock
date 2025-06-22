@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "523d99d267c5a9bfaa37f0a3306d8977",
+    "content-hash": "bf034f36c483b81ef23b8423ba4395f9",
     "packages": [
         {
             "name": "adobe-commerce/adobe-ims-metapackage",
@@ -6653,36 +6653,6 @@
             "description": "N/A"
         },
         {
-            "name": "magento/module-cardinal-commerce",
-            "version": "100.4.4",
-            "dist": {
-                "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-cardinal-commerce/magento-module-cardinal-commerce-100.4.4.0.zip",
-                "shasum": "c0917dfdd86dcef2cc4a854248b58b7dc0592223"
-            },
-            "require": {
-                "magento/framework": "103.0.*",
-                "magento/module-checkout": "100.4.*",
-                "magento/module-payment": "100.4.*",
-                "magento/module-store": "101.1.*",
-                "php": "~8.1.0||~8.2.0"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Magento\\CardinalCommerce\\": ""
-                }
-            },
-            "license": [
-                "OSL-3.0",
-                "AFL-3.0"
-            ],
-            "description": "Provides a possibility to enable 3-D Secure 2.0 support for payment methods."
-        },
-        {
             "name": "magento/module-catalog",
             "version": "104.0.6-p11",
             "dist": {
@@ -8137,46 +8107,6 @@
                 ],
                 "psr-4": {
                     "Magento\\Developer\\": ""
-                }
-            },
-            "license": [
-                "OSL-3.0",
-                "AFL-3.0"
-            ],
-            "description": "N/A"
-        },
-        {
-            "name": "magento/module-dhl",
-            "version": "100.4.5",
-            "dist": {
-                "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-dhl/magento-module-dhl-100.4.5.0.zip",
-                "shasum": "e18b59fb875cd26072734c6387215e26ca1ef632"
-            },
-            "require": {
-                "lib-libxml": "*",
-                "magento/framework": "103.0.*",
-                "magento/module-backend": "102.0.*",
-                "magento/module-catalog": "104.0.*",
-                "magento/module-catalog-inventory": "100.4.*",
-                "magento/module-config": "101.2.*",
-                "magento/module-directory": "100.4.*",
-                "magento/module-quote": "101.2.*",
-                "magento/module-sales": "103.0.*",
-                "magento/module-shipping": "100.4.*",
-                "magento/module-store": "101.1.*",
-                "php": "~8.1.0||~8.2.0"
-            },
-            "suggest": {
-                "magento/module-checkout": "100.4.*"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Magento\\Dhl\\": ""
                 }
             },
             "license": [

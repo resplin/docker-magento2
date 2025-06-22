@@ -75,6 +75,8 @@
         "magento/google-shopping-ads": "*",
 
         "magento/module-admin-adobe-ims-two-factor-auth": "*",
+        "magento/module-cardinal-commerce": "*",
+        "magento/module-dhl": "*",
         "magento/module-google-adwords": "*",
         "magento/module-google-analytics": "*",
         "magento/module-google-gtag": "*",

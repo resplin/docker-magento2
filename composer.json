@@ -49,6 +49,8 @@
         "dg/bypass-finals": "^1.4",
         "friendsofphp/php-cs-fixer": "^3.8",
         "lusitanian/oauth": "^0.8",
+        "magento/ece-tools": "^2002.2",
+        "magento/magento-cloud-docker": "^1.4",
         "magento/magento-coding-standard": "*",
         "magento/magento2-functional-testing-framework": "^4.3.1",
         "pdepend/pdepend": "^2.10",
@@ -84,4 +86,3 @@
         "magento-force": "override"
     }
 }
-

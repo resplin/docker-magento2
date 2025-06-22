@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "22516c530380482c3948ac48c725224b",
+    "content-hash": "56d6d5586fbfa001d415fc1c71952f8e",
     "packages": [
         {
             "name": "adobe-commerce/adobe-ims-metapackage",
@@ -4934,34 +4934,6 @@
             "description": "N/A"
         },
         {
-            "name": "magento/google-shopping-ads",
-            "version": "4.0.1",
-            "dist": {
-                "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/google-shopping-ads/magento-google-shopping-ads-4.0.1.0.zip",
-                "shasum": "ba1efed03c142908f53a02cce6704672c379a60d"
-            },
-            "require": {
-                "magento/framework": ">=101.0.4",
-                "magento/module-eav": ">=101.0.3",
-                "php": "7.0.2||7.0.4||>=7.0.6"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Magento\\GoogleShoppingAds\\": ""
-                }
-            },
-            "license": [
-                "OSL-3.0",
-                "AFL-3.0"
-            ],
-            "description": "Connect your Magento admin with Google Merchant Center and Google Ads. Leverage Google machine learning through Google Smart Shopping campaigns"
-        },
-        {
             "name": "magento/inventory-composer-installer",
             "version": "1.2.0",
             "dist": {
@@ -8831,135 +8803,6 @@
                 ],
                 "psr-4": {
                     "Magento\\GiftMessageGraphQl\\": ""
-                }
-            },
-            "license": [
-                "OSL-3.0",
-                "AFL-3.0"
-            ],
-            "description": "N/A"
-        },
-        {
-            "name": "magento/module-google-adwords",
-            "version": "100.4.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-google-adwords/magento-module-google-adwords-100.4.3.0.zip",
-                "shasum": "2aba2db3c6b253f4f9ce1e69ea1d3a14ce4486b6"
-            },
-            "require": {
-                "magento/framework": "103.0.*",
-                "magento/module-sales": "103.0.*",
-                "magento/module-store": "101.1.*",
-                "php": "~8.1.0||~8.2.0"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Magento\\GoogleAdwords\\": ""
-                }
-            },
-            "license": [
-                "OSL-3.0",
-                "AFL-3.0"
-            ],
-            "description": "N/A"
-        },
-        {
-            "name": "magento/module-google-analytics",
-            "version": "100.4.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-google-analytics/magento-module-google-analytics-100.4.2.0.zip",
-                "shasum": "307b0c5ca634d94c5c20314956e1daca6e2af64e"
-            },
-            "require": {
-                "magento/framework": "103.0.*",
-                "magento/module-cookie": "100.4.*",
-                "magento/module-sales": "103.0.*",
-                "magento/module-store": "101.1.*",
-                "php": "~8.1.0||~8.2.0"
-            },
-            "suggest": {
-                "magento/module-config": "101.2.*"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Magento\\GoogleAnalytics\\": ""
-                }
-            },
-            "license": [
-                "OSL-3.0",
-                "AFL-3.0"
-            ],
-            "description": "N/A"
-        },
-        {
-            "name": "magento/module-google-gtag",
-            "version": "100.4.1",
-            "dist": {
-                "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-google-gtag/magento-module-google-gtag-100.4.1.0.zip",
-                "shasum": "0bc8dc88337f04e4722cce13998dc25f1536f615"
-            },
-            "require": {
-                "magento/framework": "103.0.*",
-                "magento/module-cookie": "100.4.*",
-                "magento/module-sales": "103.0.*",
-                "magento/module-store": "101.1.*",
-                "php": "~8.1.0||~8.2.0"
-            },
-            "suggest": {
-                "magento/module-config": "101.2.*"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Magento\\GoogleGtag\\": ""
-                }
-            },
-            "license": [
-                "OSL-3.0",
-                "AFL-3.0"
-            ],
-            "description": "N/A"
-        },
-        {
-            "name": "magento/module-google-optimizer",
-            "version": "100.4.5",
-            "dist": {
-                "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-google-optimizer/magento-module-google-optimizer-100.4.5.0.zip",
-                "shasum": "01ebe586bcb10a6b9ddb941ac5558a0e911840df"
-            },
-            "require": {
-                "magento/framework": "103.0.*",
-                "magento/module-backend": "102.0.*",
-                "magento/module-catalog": "104.0.*",
-                "magento/module-cms": "104.0.*",
-                "magento/module-google-analytics": "100.4.*",
-                "magento/module-google-gtag": "100.4.*",
-                "magento/module-store": "101.1.*",
-                "magento/module-ui": "101.2.*",
-                "php": "~8.1.0||~8.2.0"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Magento\\GoogleOptimizer\\": ""
                 }
             },
             "license": [

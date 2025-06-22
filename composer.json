@@ -65,7 +65,13 @@
         "gene/bluefoot": "*"
     },
     "replace": {
+        "magento/google-shopping-ads": "*",
+
         "magento/module-admin-adobe-ims-two-factor-auth": "*",
+        "magento/module-google-adwords": "*",
+        "magento/module-google-analytics": "*",
+        "magento/module-google-gtag": "*",
+        "magento/module-google-optimizer": "*",
         "magento/module-two-factor-auth": "*",
 
         "temando/module-shipping": "*",

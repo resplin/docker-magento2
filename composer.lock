@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56d6d5586fbfa001d415fc1c71952f8e",
+    "content-hash": "523d99d267c5a9bfaa37f0a3306d8977",
     "packages": [
         {
             "name": "adobe-commerce/adobe-ims-metapackage",
@@ -5049,29 +5049,6 @@
             "description": "Metapackage with Magento Inventory modules for simple installation"
         },
         {
-            "name": "magento/language-de_de",
-            "version": "100.4.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/language-de_de/magento-language-de_de-100.4.0.0.zip",
-                "shasum": "176baf37dd2dcef3e7028a3915dbb6af95221791"
-            },
-            "require": {
-                "magento/framework": "103.0.*"
-            },
-            "type": "magento2-language",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ]
-            },
-            "license": [
-                "OSL-3.0",
-                "AFL-3.0"
-            ],
-            "description": "German (Germany) language"
-        },
-        {
             "name": "magento/language-en_us",
             "version": "100.4.0",
             "dist": {
@@ -5093,121 +5070,6 @@
                 "AFL-3.0"
             ],
             "description": "English (United States) language"
-        },
-        {
-            "name": "magento/language-es_es",
-            "version": "100.4.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/language-es_es/magento-language-es_es-100.4.0.0.zip",
-                "shasum": "27569b926ddc525670d7daa601268f9edb09c59b"
-            },
-            "require": {
-                "magento/framework": "103.0.*"
-            },
-            "type": "magento2-language",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ]
-            },
-            "license": [
-                "OSL-3.0",
-                "AFL-3.0"
-            ],
-            "description": "Spanish (Spain) language"
-        },
-        {
-            "name": "magento/language-fr_fr",
-            "version": "100.4.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/language-fr_fr/magento-language-fr_fr-100.4.0.0.zip",
-                "shasum": "6daf974ef89b58eba8b8f4de4b006ef807fbc7f2"
-            },
-            "require": {
-                "magento/framework": "103.0.*"
-            },
-            "type": "magento2-language",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ]
-            },
-            "license": [
-                "OSL-3.0",
-                "AFL-3.0"
-            ],
-            "description": "French (France) language"
-        },
-        {
-            "name": "magento/language-nl_nl",
-            "version": "100.4.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/language-nl_nl/magento-language-nl_nl-100.4.0.0.zip",
-                "shasum": "4885585685280153d691058f5344fb0ce46da023"
-            },
-            "require": {
-                "magento/framework": "103.0.*"
-            },
-            "type": "magento2-language",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ]
-            },
-            "license": [
-                "OSL-3.0",
-                "AFL-3.0"
-            ],
-            "description": "Dutch (Netherlands) language"
-        },
-        {
-            "name": "magento/language-pt_br",
-            "version": "100.4.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/language-pt_br/magento-language-pt_br-100.4.0.0.zip",
-                "shasum": "de9b81317832aeeee8cb195d0a63b8be9176fda9"
-            },
-            "require": {
-                "magento/framework": "103.0.*"
-            },
-            "type": "magento2-language",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ]
-            },
-            "license": [
-                "OSL-3.0",
-                "AFL-3.0"
-            ],
-            "description": "Portuguese (Brazil) language"
-        },
-        {
-            "name": "magento/language-zh_hans_cn",
-            "version": "100.4.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/language-zh_hans_cn/magento-language-zh_hans_cn-100.4.0.0.zip",
-                "shasum": "cfae6ec93fb5035704e96e19e3865f644ad3b304"
-            },
-            "require": {
-                "magento/framework": "103.0.*"
-            },
-            "type": "magento2-language",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ]
-            },
-            "license": [
-                "OSL-3.0",
-                "AFL-3.0"
-            ],
-            "description": "Chinese (China) language"
         },
         {
             "name": "magento/magento-composer-installer",
@@ -11930,34 +11792,6 @@
                 "OSL-3.0",
                 "AFL-3.0"
             ]
-        },
-        {
-            "name": "magento/module-marketplace",
-            "version": "100.4.4-p2",
-            "dist": {
-                "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-marketplace/magento-module-marketplace-100.4.4.0-patch2.zip",
-                "shasum": "89bf5ae196724b104eed50f55756bcc533896370"
-            },
-            "require": {
-                "magento/framework": "103.0.*",
-                "magento/module-backend": "102.0.*",
-                "php": "~8.1.0||~8.2.0"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Magento\\Marketplace\\": ""
-                }
-            },
-            "license": [
-                "OSL-3.0",
-                "AFL-3.0"
-            ],
-            "description": "N/A"
         },
         {
             "name": "magento/module-media-content",

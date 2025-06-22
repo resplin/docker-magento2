@@ -65,6 +65,13 @@
         "gene/bluefoot": "*"
     },
     "replace": {
+        "magento/language-de_de": "*",
+        "magento/language-es_es": "*",
+        "magento/language-fr_fr": "*",
+        "magento/language-nl_nl": "*",
+        "magento/language-pt_br": "*",
+        "magento/language-zh_hans_cn": "*",
+
         "magento/google-shopping-ads": "*",
 
         "magento/module-admin-adobe-ims-two-factor-auth": "*",
@@ -72,6 +79,7 @@
         "magento/module-google-analytics": "*",
         "magento/module-google-gtag": "*",
         "magento/module-google-optimizer": "*",
+        "magento/module-marketplace": "*",
         "magento/module-two-factor-auth": "*",
 
         "temando/module-shipping": "*",

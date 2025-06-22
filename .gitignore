@@ -75,4 +75,6 @@ atlassian*
 
 # Custom rules
 .docker/config.env
+app/etc/config.php.bak
+app/etc/env.php.bak
 auth.json

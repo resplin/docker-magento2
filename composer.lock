@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "684dbdc6a11531be7def60c4130c1099",
+    "content-hash": "22516c530380482c3948ac48c725224b",
     "packages": [
         {
             "name": "adobe-commerce/adobe-ims-metapackage",
@@ -21993,53 +21993,6 @@
                 }
             ],
             "time": "2023-10-04T17:23:23+00:00"
-        },
-        {
-            "name": "temando/module-shipping",
-            "version": "2.0.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://repo.magento.com/archives/temando/module-shipping/temando-module-shipping-2.0.0.0.zip",
-                "shasum": "78974a6f6a2bfb214e96882562111d35163971b1"
-            },
-            "require": {
-                "temando/module-shipping-remover": "1.0.0"
-            },
-            "type": "metapackage",
-            "license": [
-                "OSL-3.0"
-            ],
-            "description": "Temando multi-carrier shipping extension for Magento 2"
-        },
-        {
-            "name": "temando/module-shipping-remover",
-            "version": "1.0.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://repo.magento.com/archives/temando/module-shipping-remover/temando-module-shipping-remover-1.0.0.0.zip",
-                "shasum": "fd37ccded9678386a94e104fbd37332254d7c429"
-            },
-            "require": {
-                "magento/framework": "*",
-                "magento/module-eav": "*"
-            },
-            "replace": {
-                "temando/module-shipping-m2": "*"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Temando\\ShippingRemover\\": ""
-                }
-            },
-            "license": [
-                "OSL-3.0",
-                "AFL-3.0"
-            ],
-            "description": "Removes Temando multi-carrier shipping extension from Magento 2"
         },
         {
             "name": "tubalmartin/cssmin",

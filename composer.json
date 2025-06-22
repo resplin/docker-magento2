@@ -18,9 +18,9 @@
     },
     "version": "2.4.6-p11",
     "require": {
-        "magento/product-community-edition": "2.4.6-p11",
         "magento/composer-dependency-version-audit-plugin": "~0.1",
-        "magento/composer-root-update-plugin": "~2.0"
+        "magento/composer-root-update-plugin": "~2.0",
+        "magento/product-community-edition": "2.4.6-p11",
     },
     "autoload": {
         "exclude-from-classmap": [

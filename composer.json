@@ -64,6 +64,10 @@
     "conflict": {
         "gene/bluefoot": "*"
     },
+    "replace": {
+        "magento/module-admin-adobe-ims-two-factor-auth": "*",
+        "magento/module-two-factor-auth": "*"
+    },
     "autoload-dev": {
         "psr-4": {
             "Magento\\PhpStan\\": "dev/tests/static/framework/Magento/PhpStan/",

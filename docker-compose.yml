@@ -1,4 +1,4 @@
-# ./vendor/bin/ece-docker 'build:compose' --mode=developer --with-xdebug
+# ./vendor/bin/ece-docker 'build:compose' --mode=developer --with-xdebug --with-test
 services:
   db:
     hostname: db.magento2.docker
@@ -125,6 +125,24 @@ services:
     depends_on:
       varnish:
         condition: service_started
+  test:
+    hostname: test.magento2.docker
+    image: 'magento/magento-cloud-docker-php:8.2-cli-1.4.3'
+    extends:
+      service: generic
+    volumes:
+      - '.:/app:delegated'
+    networks:
+      magento:
+        aliases:
+          - test.magento2.docker
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      opensearch:
+        condition: service_healthy
   fpm_xdebug:
     hostname: fpm_xdebug.magento2.docker
     image: 'magento/magento-cloud-docker-php:8.2-fpm-1.4.3'

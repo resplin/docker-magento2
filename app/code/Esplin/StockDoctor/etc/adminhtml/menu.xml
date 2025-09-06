@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Menu/etc/menu.xsd">
+    <menu>
+        <add id="Esplin_StockDoctor::menu" title="Stock Doctor" module="Esplin_StockDoctor"
+             sortOrder="100" parent="Magento_Backend::stores_settings" action="stockdoctor/dashboard/index"
+             resource="Esplin_StockDoctor::manage"/>
+    </menu>
+</config>

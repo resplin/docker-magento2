@@ -1,0 +1,6 @@
+<div class="admin__page-section">
+    <h1><?= __('Stock Doctor Dashboard') ?></h1>
+    <p><?= __('This is the starting point for running MSI inconsistency scans and fixes.') ?></p>
+    <button onclick="setLocation('<?= $block->getUrl('stockdoctor/action/scan') ?>')" class="action-default scalable"><?= __('Run Scan') ?></button>
+    <button onclick="setLocation('<?= $block->getUrl('stockdoctor/action/fix') ?>')" class="action-default scalable"><?= __('Fix Inconsistencies') ?></button>
+</div>

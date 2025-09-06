@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <dataSource name="esplin_stockdoctor_inconsistency_listing_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">Esplin\StockDoctor\Ui\DataProvider\InconsistencyDataProvider</argument>
+            <argument name="name" xsi:type="string">esplin_stockdoctor_inconsistency_listing_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">entity_id</argument>
+            <argument name="requestFieldName" xsi:type="string">entity_id</argument>
+        </argument>
+    </dataSource>
+
+    <columns name="inconsistency_columns">
+        <column name="sku">
+            <settings>
+                <label translate="true">SKU</label>
+                <sorting>asc</sorting>
+            </settings>
+        </column>
+        <column name="stock_id">
+            <settings>
+                <label translate="true">Stock ID</label>
+            </settings>
+        </column>
+        <column name="qty">
+            <settings>
+                <label translate="true">Qty</label>
+            </settings>
+        </column>
+        <column name="salable_qty">
+            <settings>
+                <label translate="true">Salable Qty</label>
+            </settings>
+        </column>
+        <column name="created_at">
+            <settings>
+                <label translate="true">Scanned At</label>
+            </settings>
+        </column>
+    </columns>
+
+    <massaction name="listing_massaction">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="selectProvider" xsi:type="string">esplin_stockdoctor_inconsistency_listing.esplin_stockdoctor_inconsistency_listing_data_source</item>
+                <item name="component" xsi:type="string">Magento_Ui/js/grid/tree-massactions</item>
+            </item>
+        </argument>
+        <action name="fix_selected">
+            <settings>
+                <type>fix_selected</type>
+                <label translate="true">Fix Selected</label>
+                <url path="stockdoctor/action/fixSelected" />
+                <confirm>
+                    <title translate="true">Confirm Fix</title>
+                    <message translate="true">Are you sure you want to fix the selected inconsistencies?</message>
+                </confirm>
+            </settings>
+        </action>
+    </massaction>
+</listing>

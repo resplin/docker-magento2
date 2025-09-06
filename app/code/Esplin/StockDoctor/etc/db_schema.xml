@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="esplin_stockdoctor_inconsistency" resource="default" engine="innodb" comment="Stock Doctor Inconsistencies">
+        <column xsi:type="int" name="entity_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity ID"/>
+        <column xsi:type="varchar" name="sku" nullable="false" length="64" comment="Product SKU"/>
+        <column xsi:type="int" name="stock_id" nullable="false" comment="Stock ID"/>
+        <column xsi:type="decimal" name="qty" scale="4" precision="12" nullable="false" comment="Quantity"/>
+        <column xsi:type="decimal" name="salable_qty" scale="4" precision="12" nullable="false" comment="Salable Quantity"/>
+        <column xsi:type="timestamp" name="created_at" nullable="false" default="CURRENT_TIMESTAMP" comment="Created At"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+</schema>

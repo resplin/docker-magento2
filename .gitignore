@@ -78,3 +78,5 @@ atlassian*
 app/etc/config.php.bak
 app/etc/env.php.bak
 auth.json
+
+app/code/Esplin/CustomerNumber

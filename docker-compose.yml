@@ -1,4 +1,4 @@
-# ./vendor/bin/ece-docker 'build:compose' --mode=developer --with-xdebug --with-test
+# ./vendor/bin/ece-docker 'build:compose' --mode=developer --with-xdebug
 services:
   db:
     hostname: db.magento2.docker
@@ -15,7 +15,9 @@ services:
       - '.:/app:delegated'
       - 'magento-magento-db:/var/lib/mysql'
     healthcheck:
-      test: 'mysqladmin ping -h localhost -pmagento2'
+      test:
+        - CMD-SHELL
+        - '(mariadb-admin ping -h localhost -pmagento2 || mysqladmin ping -h localhost -pmagento2)'
       interval: 30s
       timeout: 30s
       retries: 3
@@ -48,7 +50,7 @@ services:
           - redis.magento2.docker
   opensearch:
     hostname: opensearch.magento2.docker
-    image: 'magento/magento-cloud-docker-opensearch:2.4-1.4.3'
+    image: 'magento/magento-cloud-docker-opensearch:2.4-1.4.5'
     ulimits:
       memlock:
         soft: -1
@@ -65,7 +67,7 @@ services:
           - opensearch.magento2.docker
   fpm:
     hostname: fpm.magento2.docker
-    image: 'magento/magento-cloud-docker-php:8.2-fpm-1.4.3'
+    image: 'magento/magento-cloud-docker-php:8.2-fpm-1.4.5'
     extends:
       service: generic
     volumes:
@@ -79,7 +81,7 @@ services:
         condition: service_healthy
   web:
     hostname: web.magento2.docker
-    image: 'magento/magento-cloud-docker-nginx:1.24-1.4.3'
+    image: 'magento/magento-cloud-docker-nginx:1.24-1.4.5'
     extends:
       service: generic
     volumes:
@@ -97,7 +99,7 @@ services:
         condition: service_started
   varnish:
     hostname: varnish.magento2.docker
-    image: 'magento/magento-cloud-docker-varnish:6.6-1.4.3'
+    image: 'magento/magento-cloud-docker-varnish:6.6-1.4.5'
     networks:
       magento:
         aliases:
@@ -107,7 +109,7 @@ services:
         condition: service_started
   tls:
     hostname: tls.magento2.docker
-    image: 'magento/magento-cloud-docker-nginx:1.24-1.4.3'
+    image: 'magento/magento-cloud-docker-nginx:1.24-1.4.5'
     extends:
       service: generic
     networks:
@@ -125,33 +127,15 @@ services:
     depends_on:
       varnish:
         condition: service_started
-  test:
-    hostname: test.magento2.docker
-    image: 'magento/magento-cloud-docker-php:8.2-cli-1.4.3'
-    extends:
-      service: generic
-    volumes:
-      - '.:/app:delegated'
-    networks:
-      magento:
-        aliases:
-          - test.magento2.docker
-    depends_on:
-      db:
-        condition: service_healthy
-      redis:
-        condition: service_healthy
-      opensearch:
-        condition: service_healthy
   fpm_xdebug:
     hostname: fpm_xdebug.magento2.docker
-    image: 'magento/magento-cloud-docker-php:8.2-fpm-1.4.3'
+    image: 'magento/magento-cloud-docker-php:8.2-fpm-1.4.5'
     extends:
       service: generic
     volumes:
       - '.:/app:delegated'
     environment:
-      - 'PHP_EXTENSIONS=bcmath bz2 calendar exif gd gettext intl mysqli pcntl pdo_mysql soap sockets sysvmsg sysvsem sysvshm opcache zip xsl sodium redis xdebug'
+      - 'PHP_EXTENSIONS=bcmath bz2 calendar exif gd gettext intl mysqli pcntl pdo_mysql soap sockets sysvmsg sysvsem sysvshm opcache zip xsl sodium ftp redis xdebug'
     networks:
       magento:
         aliases:
@@ -161,15 +145,15 @@ services:
         condition: service_started
   generic:
     hostname: generic.magento2.docker
-    image: 'magento/magento-cloud-docker-php:8.2-cli-1.4.3'
+    image: 'magento/magento-cloud-docker-php:8.2-cli-1.4.5'
     env_file: ./.docker/config.env
     environment:
       - MAGENTO_RUN_MODE=developer
-      - 'PHP_EXTENSIONS=bcmath bz2 calendar exif gd gettext intl mysqli pcntl pdo_mysql soap sockets sysvmsg sysvsem sysvshm opcache zip xsl sodium redis'
+      - 'PHP_EXTENSIONS=bcmath bz2 calendar exif gd gettext intl mysqli pcntl pdo_mysql soap sockets sysvmsg sysvsem sysvshm opcache zip xsl sodium ftp redis'
       - 'SENDMAIL_PATH=/usr/local/bin/mhsendmail --smtp-addr=mailhog:1025'
   build:
     hostname: build.magento2.docker
-    image: 'magento/magento-cloud-docker-php:8.2-cli-1.4.3'
+    image: 'magento/magento-cloud-docker-php:8.2-cli-1.4.5'
     extends:
       service: generic
     volumes:
@@ -187,7 +171,7 @@ services:
         condition: service_healthy
   deploy:
     hostname: deploy.magento2.docker
-    image: 'magento/magento-cloud-docker-php:8.2-cli-1.4.3'
+    image: 'magento/magento-cloud-docker-php:8.2-cli-1.4.5'
     extends:
       service: generic
     volumes:

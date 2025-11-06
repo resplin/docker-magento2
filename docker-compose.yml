@@ -1,8 +1,8 @@
-# ./vendor/bin/ece-docker 'build:compose' --mode=developer --with-xdebug
+# ./vendor/bin/ece-docker 'build:compose' --mode=developer --with-xdebug --db '10.11' --redis '7.2' --node 22
 services:
   db:
     hostname: db.magento2.docker
-    image: 'mariadb:10.6'
+    image: 'mariadb:10.11'
     shm_size: 2gb
     environment:
       - MYSQL_ROOT_PASSWORD=magento2
@@ -27,7 +27,7 @@ services:
           - db.magento2.docker
   redis:
     hostname: redis.magento2.docker
-    image: 'redis:7.0'
+    image: 'redis:7.2'
     volumes:
       - '.:/app:delegated'
     ports:
@@ -169,6 +169,8 @@ services:
         condition: service_healthy
       opensearch:
         condition: service_healthy
+      node:
+        condition: service_started
   deploy:
     hostname: deploy.magento2.docker
     image: 'magento/magento-cloud-docker-php:8.2-cli-1.4.5'
@@ -187,6 +189,17 @@ services:
         condition: service_healthy
       opensearch:
         condition: service_healthy
+      node:
+        condition: service_started
+  node:
+    hostname: node.magento2.docker
+    image: 'node:22'
+    volumes:
+      - '.:/app:delegated'
+    networks:
+      magento:
+        aliases:
+          - node.magento2.docker
   mailhog:
     hostname: mailhog.magento2.docker
     image: 'mailhog/mailhog:v1.0.1'

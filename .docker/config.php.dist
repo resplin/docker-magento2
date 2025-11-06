@@ -9,14 +9,14 @@ return [
                 'password' => 'magento2',
                 'username' => 'magento2',
                 'port' => '3306',
-                'type' => 'mysql:10.6'
+                'type' => 'mysql:10.11'
             ]
         ],
         'redis' => [
             [
                 'host' => 'redis',
                 'port' => '6379',
-                'type' => 'redis:7.0'
+                'type' => 'redis:7.2'
             ]
         ],
         'opensearch' => [

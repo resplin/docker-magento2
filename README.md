@@ -1,6 +1,14 @@
 # docker-magento2
 Docker / Magento2 Local Development Setup
 
+# About
+Uses Magento's cloud docker tools to setup a local environment.
+
+Additions / Modfications:
+- Fixes Maihog image version.
+- Adds helpful scripts in `bin/` to get started:
+  - `init.sh` - Drops current setup, rebuilds, and runs setup scripts.
+
 # Testing
 ## Integration
 ### Setup test DB
@@ -18,14 +26,11 @@ GRANT ALL PRIVILEGES ON magento2_integration_tests.* TO 'magento2'@'%';
 ## Unit
 `dev/tests/unit/phpunit.xml.dist`
 
-# Commands
-| Command                                  | Notes                                                                                                                                                                            |
-|------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `vendor/bin/ece-docker build:compose`    | Regenerates the `docker-compose.yml` configuration file and overwrites existing. Custom configurations across builds by adding settings to a `docker-compose.override.yml` file. |
-| `vendor/bin/ece-docker build:compose -h` | View available build options.                                                                                                                                                    |
-|                                          |                                                                                                                                                                                  |
-|                                          |                                                                                                                                                                                  |
-|                                          |                                                                                                                                                                                  |
+# Common Commands
+| Command                                  | Notes                                                                            |
+|------------------------------------------|----------------------------------------------------------------------------------|
+| `vendor/bin/ece-docker build:compose`    | Regenerates the `docker-compose.yml` configuration file and overwrites existing. |
+| `vendor/bin/ece-docker build:compose -h` | View available build options.                                                    |
 
 # Notes
 Custom PHP configuration file:

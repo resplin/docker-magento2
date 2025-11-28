@@ -1,6 +1,6 @@
 name: 'magento'
 system:
-  mode: 'production'
+  mode: 'developer'
 services:
   php:
     version: '8.2'
@@ -10,10 +10,10 @@ services:
         - json
         - redis
   mysql:
-    version: '10.6'
+    version: '10.11'
     image: 'mariadb'
   redis:
-    version: '7.0'
+    version: '7.2'
     image: 'redis'
   opensearch:
     version: '2.4'

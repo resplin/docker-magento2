@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="esplin_crudexample_house" resource="default" engine="innodb" comment="esplin_crudexample_house Table">
+		<column xsi:type="int" name="house_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="house_id"/>
+		</constraint>
+		<column name="room_count" nullable="true" xsi:type="smallint" comment="Number of rooms" default="0" identity="false"/>
+	</table>
+</schema>

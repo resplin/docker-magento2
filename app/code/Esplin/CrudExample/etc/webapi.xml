@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/esplin-crudexample/house" method="POST">
+		<service class="Esplin\CrudExample\Api\HouseRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Esplin_CrudExample::House_save"/>
+		</resources>
+	</route>
+	<route url="/V1/esplin-crudexample/house/search" method="GET">
+		<service class="Esplin\CrudExample\Api\HouseRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Esplin_CrudExample::House_view"/>
+		</resources>
+	</route>
+	<route url="/V1/esplin-crudexample/house/:houseId" method="GET">
+		<service class="Esplin\CrudExample\Api\HouseRepositoryInterface" method="get"/>
+		<resources>
+			<resource ref="Esplin_CrudExample::House_view"/>
+		</resources>
+	</route>
+	<route url="/V1/esplin-crudexample/house/:houseId" method="PUT">
+		<service class="Esplin\CrudExample\Api\HouseRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Esplin_CrudExample::House_update"/>
+		</resources>
+	</route>
+	<route url="/V1/esplin-crudexample/house/:houseId" method="DELETE">
+		<service class="Esplin\CrudExample\Api\HouseRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Esplin_CrudExample::House_delete"/>
+		</resources>
+	</route>
+</routes>

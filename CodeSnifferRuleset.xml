@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<ruleset name="Randy Esplin Custom Ruleset">
+    <arg name="extensions" value="php,phtml" />
+    <arg name="report" value="diff" />
+    <arg name="colors" />
+    <arg value="sp" />
+
+    <!-- Not each file will have PHP code -->
+    <rule ref="Internal.NoCodeFound">
+        <severity>0</severity>
+    </rule>
+
+    <!-- Include Magento2's ruleset -->
+    <rule ref="dev/tests/static/framework/Magento/ruleset.xml">
+        <!-- Relax on line lengths -->
+        <exclude name="Generic.Files.LineLength.TooLong" />
+
+        <!-- Allow code to be commented out -->
+        <exclude name="Squiz.PHP.CommentedOutCode.Found" />
+
+        <!-- Allow code to be lined up -->
+        <exclude name="Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma" />
+
+        <!-- No clue what's wrong -->
+        <exclude name="Magento2Framework.Header.Copyright.FoundCopyrightMissingOrWrongFormat" />
+        <exclude name="Magento2Framework.Header.CopyrightAnotherExtensionsFiles.FoundCopyrightMissingOrWrongFormat" />
+
+        <!-- We'll get around to this eventually -->
+        <exclude name="PSR2.Classes.PropertyDeclaration" />
+        <exclude name="Magento.Annotation.MethodAnnotationStructure.MethodAnnotation" />
+        <exclude name="Magento.Annotation.MethodArguments.MethodArguments" />
+        <exclude name="Magento2.Annotation.MethodArguments.MethodArguments" />
+        <exclude name="Magento2.Annotation.MethodAnnotationStructure.MethodAnnotation" />
+        <exclude name="Magento2.Annotation.MethodAnnotationStructure.NoCommentBlock" />
+        <exclude name="Magento2.Commenting.ClassPropertyPHPDocFormatting.Missing" />
+        <exclude name="Magento2.SQL.RawQuery.FoundRawSql" />
+    </rule>
+</ruleset>

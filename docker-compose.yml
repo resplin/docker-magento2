@@ -50,7 +50,7 @@ services:
           - redis.magento2.docker
   opensearch:
     hostname: opensearch.magento2.docker
-    image: 'magento/magento-cloud-docker-opensearch:2.4-1.4.6'
+    image: 'magento/magento-cloud-docker-opensearch:2.4-1.4.5'
     ulimits:
       memlock:
         soft: -1
@@ -67,7 +67,7 @@ services:
           - opensearch.magento2.docker
   fpm:
     hostname: fpm.magento2.docker
-    image: 'magento/magento-cloud-docker-php:8.2-fpm-1.4.6'
+    image: 'magento/magento-cloud-docker-php:8.2-fpm-1.4.5'
     extends:
       service: generic
     volumes:
@@ -81,7 +81,7 @@ services:
         condition: service_healthy
   web:
     hostname: web.magento2.docker
-    image: 'magento/magento-cloud-docker-nginx:1.24-1.4.6'
+    image: 'magento/magento-cloud-docker-nginx:1.24-1.4.5'
     extends:
       service: generic
     volumes:
@@ -99,7 +99,7 @@ services:
         condition: service_started
   varnish:
     hostname: varnish.magento2.docker
-    image: 'magento/magento-cloud-docker-varnish:6.6-1.4.6'
+    image: 'magento/magento-cloud-docker-varnish:6.6-1.4.5'
     networks:
       magento:
         aliases:
@@ -109,7 +109,7 @@ services:
         condition: service_started
   tls:
     hostname: tls.magento2.docker
-    image: 'magento/magento-cloud-docker-nginx:1.24-1.4.6'
+    image: 'magento/magento-cloud-docker-nginx:1.24-1.4.5'
     extends:
       service: generic
     networks:
@@ -129,7 +129,7 @@ services:
         condition: service_started
   fpm_xdebug:
     hostname: fpm_xdebug.magento2.docker
-    image: 'magento/magento-cloud-docker-php:8.2-fpm-1.4.6'
+    image: 'magento/magento-cloud-docker-php:8.2-fpm-1.4.5'
     extends:
       service: generic
     volumes:
@@ -145,7 +145,7 @@ services:
         condition: service_started
   generic:
     hostname: generic.magento2.docker
-    image: 'magento/magento-cloud-docker-php:8.2-cli-1.4.6'
+    image: 'magento/magento-cloud-docker-php:8.2-cli-1.4.5'
     env_file: ./.docker/config.env
     environment:
       - MAGENTO_RUN_MODE=developer
@@ -153,7 +153,7 @@ services:
       - 'SENDMAIL_PATH=/usr/local/bin/mhsendmail --smtp-addr=mailhog:1025'
   build:
     hostname: build.magento2.docker
-    image: 'magento/magento-cloud-docker-php:8.2-cli-1.4.6'
+    image: 'magento/magento-cloud-docker-php:8.2-cli-1.4.5'
     extends:
       service: generic
     volumes:
@@ -173,7 +173,7 @@ services:
         condition: service_started
   deploy:
     hostname: deploy.magento2.docker
-    image: 'magento/magento-cloud-docker-php:8.2-cli-1.4.6'
+    image: 'magento/magento-cloud-docker-php:8.2-cli-1.4.5'
     extends:
       service: generic
     volumes:
